@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
-
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -12,53 +6,17 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 import warnings
 warnings.filterwarnings("ignore")
 
-
-# In[9]:
-
-
 train = pd.read_csv("C:/Users/cinep/Downloads/archive/train_u6lujuX_CVtuZ9i.csv")
 test = pd.read_csv("C:/Users/cinep/Downloads/archive/test_Y3wMUE5_7gLdaTN.csv")
-
-
-# In[10]:
-
 
 train_original=train.copy()
 test_original=test.copy()
 
-
-# In[11]:
-
-
 train.columns
-
-
-# In[12]:
-
-
 test.columns
-
-
-# In[13]:
-
-
 train.dtypes
-
-
-# In[14]:
-
-
 train.shape
-
-
-# In[15]:
-
-
 test.shape
-
-
-# In[16]:
-
 
 plt.figure(1)
 plt.subplot(121)
@@ -69,9 +27,6 @@ plt.subplot(122)
 train['LoanAmount'].plot.box(figsize=(16,5))
 
 plt.show()
-
-
-# In[17]:
 
 
 train['Loan_Status'].value_counts()
